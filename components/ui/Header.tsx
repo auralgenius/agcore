@@ -46,7 +46,9 @@ const Header = () => {
               <UserNav
                 image={user?.imageUrl}
                 name={user?.fullName!}
+                wallet={user?.primaryWeb3Wallet?.web3Wallet!}
                 email={user?.primaryEmailAddress?.emailAddress!}
+
               />
             </>
           ) : (
