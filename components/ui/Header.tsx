@@ -48,7 +48,6 @@ const Header = () => {
                 name={user?.fullName!}
                 wallet={user?.primaryWeb3Wallet?.web3Wallet!}
                 email={user?.primaryEmailAddress?.emailAddress!}
-
               />
             </>
           ) : (
