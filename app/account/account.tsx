@@ -103,11 +103,12 @@ const ProfileHomePage = ({
         window.alert('Mint successful!');
       } catch (error) {
         console.error('Mint failed:', error);
-        window.alert('Minting failed: ' + error.message);
+        const errorMessage = (error as Error).message || 'Unknown error';
+        window.alert('Minting failed: ' + errorMessage);
       }
     };
 
-    function formatWallet(walletAddress) {
+    function formatWallet(walletAddress: string) {
       if (!walletAddress || walletAddress.length < 14) {
         return walletAddress; // 如果地址长度不足，直接返回原始地址
       }

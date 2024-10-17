@@ -1,6 +1,6 @@
 import { api } from '@/convex/_generated/api';
 import { preloadQuery } from 'convex/nextjs';
-import ManageAccountItem from './account';
+import ManageAccountItem from './accountETH';
 import { getAuthToken } from '../auth';
 
 const ServerDashboardHomePage = async () => {
@@ -9,6 +9,7 @@ const ServerDashboardHomePage = async () => {
   const preloadedNotes = await preloadQuery(api.notes.getNotes, {}, { token });
 
   return <ManageAccountItem preloadedNotes={preloadedNotes} />;
+
 };
 
 export default ServerDashboardHomePage;
